@@ -11,31 +11,33 @@ export class Dropzone
   private notifyOutputChanged: () => void;
   private webAPI: ComponentFramework.WebApi;
   private previousFormType: number | null = null;
+
   public init(
     context: ComponentFramework.Context<IInputs>,
     notifyOutputChanged: () => void,
     state: ComponentFramework.Dictionary,
     container: HTMLDivElement
   ): void {
-    const appName = getLocalString(context, LocalStrings.Button.Label_Preview)
-    console.log(`${appName} PCF 2.9.5 Initialised`);
+    const appName = getLocalString(context, LocalStrings.Button.Label_Preview);
+    // CUSTOM 2026-04-08: version bumped to 2026.4.8; sharePointOnlyMode property added
+    console.log(`${appName} PCF 2026.4.8 Initialised`);
     this.theContainer = container;
     this.notifyOutputChanged = notifyOutputChanged;
     this.webAPI = context.webAPI;
-  
+
     const xrmCheckInterval = setInterval(() => {
       if (typeof Xrm !== "undefined") {
         clearInterval(xrmCheckInterval);
-  
+
         this.previousFormType = Xrm.Page.ui.getFormType() as number;
         const formContext = Xrm?.Page;
-  
+
         if (formContext) {
           formContext.data.entity.addOnSave(this.checkFormTypeChange);
         }
-      } 
+      }
     }, 500);
-  
+
     setTimeout(() => {
       clearInterval(xrmCheckInterval);
     }, 10000);
@@ -62,14 +64,17 @@ export class Dropzone
       }
     }, 500);
   };
+
   public updateView(
     context: ComponentFramework.Context<IInputs>
   ): React.ReactElement {
     let isDisabled = context.mode.isControlDisabled;
     return React.createElement(Landing, { context: context, isDisabled });
   }
+
   public getOutputs(): IOutputs {
     return {};
   }
+
   public destroy(): void {}
 }
