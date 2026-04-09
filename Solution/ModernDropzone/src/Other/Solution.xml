@@ -1,37 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ImportExportXml version="9.1.0.643" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <!-- Unique Name of Cds Solution-->
     <UniqueName>ModernDropzone</UniqueName>
     <LocalizedNames>
-      <!-- Localized Solution Name in language code -->
       <LocalizedName description="ModernDropzone" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.22</Version>
+    <!-- CUSTOM 2026-04-08: version bumped to 2026.4.8 for sharePointOnlyMode release -->
+    <Version>2026.4.8</Version>
     <!-- Solution Package Type: Unmanaged(0)/Managed(1)/Both(2)-->
     <Managed>2</Managed>
     <Publisher>
-      <!-- Unique Publisher Name of Cds Solution -->
       <UniqueName>gorgonuk</UniqueName>
       <LocalizedNames>
-        <!-- Localized Cds Publisher Name in language code-->
         <LocalizedName description="gorgonuk" languagecode="1033" />
       </LocalizedNames>
       <Descriptions>
-        <!-- Description of Cds Publisher in language code -->
         <Description description="gorgonuk" languagecode="1033" />
       </Descriptions>
       <EMailAddress xsi:nil="true">
       </EMailAddress>
       <SupportingWebsiteUrl xsi:nil="true">
       </SupportingWebsiteUrl>
-      <!-- Customization Prefix for the Cds Publisher-->
       <CustomizationPrefix>guk</CustomizationPrefix>
-      <!-- Derived Option Value Prefix for the Customization Prefix of Cds Publisher -->
       <CustomizationOptionValuePrefix>44888</CustomizationOptionValuePrefix>
       <Addresses>
-        <!-- Address of the Publisher-->
         <Address>
           <AddressNumber>1</AddressNumber>
           <AddressTypeCode>1</AddressTypeCode>
